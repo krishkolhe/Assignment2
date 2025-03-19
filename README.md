@@ -1,4 +1,4 @@
-# SOFTWARE LAB 3 ASSIGNMENT: Build a Multi-App Django Project and Deploy with Docker
+# SOFTWARE LAB 3 ASSIGNMENT: BUILD A MUILTI APP DJANGO PROJECT AND DEPLOY WITH DOCKER.
 
 ## Description
 A multi-app Django project containerized with Docker and automated using Jenkins 
