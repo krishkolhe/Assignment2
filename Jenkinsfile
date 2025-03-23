@@ -1,44 +1,26 @@
 pipeline {
     agent any
 
-    environment {
-        GITHUB_CREDENTIALS = credentials('github-credentials')  // Reference stored credentials
-    }
-
     stages {
         stage('Clone Repository') {
             steps {
+                git 'https://github.com//StudentProject.git'
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
                 script {
-                    git credentialsId: 'github-credentials', url: 'https://github.com/YOUR_USERNAME/YOUR_REPO.git', branch: 'main'
+                    sh 'docker build -t yourdockerhubusername/studentproject .'
                 }
             }
         }
-
-        stage('Set Up Python') {
+        stage('Push Docker Image') {
             steps {
                 script {
-                    sh 'python -m venv venv'
-                    sh 'source venv/bin/activate'
-                    sh 'pip install -r requirements.txt'
-                }
-            }
-        }
-
-        stage('Run Migrations') {
-            steps {
-                script {
-                    sh 'python manage.py migrate'
-                }
-            }
-        }
-
-        stage('Run Server') {
-            steps {
-                script {
-                    sh 'python manage.py runserver 0.0.0.0:8000 &'
+                    sh 'docker login -u yourdockerhubusername -p yourpassword'
+                    sh 'docker push yourdockerhubusername/studentproject'
                 }
             }
         }
     }
 }
-
