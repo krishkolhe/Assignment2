@@ -4,22 +4,21 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/Agasya27/srceom-agasya-butolia-sl-3-Ass-2.git'
+                git 'https://github.com/yourusername/StudentProject.git'
             }
         }
-
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'docker build -t studentproject .'
+                    sh 'docker build -t yourdockerhubusername/studentproject .'
                 }
             }
         }
-
-        stage('Run Container') {
+        stage('Push Docker Image') {
             steps {
                 script {
-                    sh 'docker run -d -p 8000:8000 studentproject'
+                    sh 'docker login -u yourdockerhubusername -p yourpassword'
+                    sh 'docker push yourdockerhubusername/studentproject'
                 }
             }
         }
