@@ -4,21 +4,32 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/yourusername/StudentProject.git'
+                git 'https://github.com/YOUR_USERNAME/YOUR_REPO.git'
             }
         }
-        stage('Build Docker Image') {
+
+        stage('Set Up Python') {
             steps {
                 script {
-                    sh 'docker build -t yourdockerhubusername/studentproject .'
+                    sh 'python -m venv venv'
+                    sh 'source venv/bin/activate'
+                    sh 'pip install -r requirements.txt'
                 }
             }
         }
-        stage('Push Docker Image') {
+
+        stage('Run Migrations') {
             steps {
                 script {
-                    sh 'docker login -u yourdockerhubusername -p yourpassword'
-                    sh 'docker push yourdockerhubusername/studentproject'
+                    sh 'python manage.py migrate'
+                }
+            }
+        }
+
+        stage('Run Server') {
+            steps {
+                script {
+                    sh 'python manage.py runserver 0.0.0.0:8000 &'
                 }
             }
         }
