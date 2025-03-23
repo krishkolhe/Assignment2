@@ -1,10 +1,16 @@
 pipeline {
     agent any
 
+    environment {
+        GITHUB_CREDENTIALS = credentials('github-credentials')  // Reference stored credentials
+    }
+
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/YOUR_REPO.git'
+                script {
+                    git credentialsId: 'github-credentials', url: 'https://github.com/YOUR_USERNAME/YOUR_REPO.git', branch: 'main'
+                }
             }
         }
 
@@ -35,3 +41,4 @@ pipeline {
         }
     }
 }
+
