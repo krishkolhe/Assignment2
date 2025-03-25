@@ -2,7 +2,7 @@
 
 ## Description
 A multi-app Django project containerized with Docker and automated using Jenkins 
-made an homepage to selct E-commerce platform blikit and zepto and there two different landing pages
+made an homepage to selct between samsung and apple smartphones
 
 ## How to Run Locally (Without Docker)
 - Clone this repository.
@@ -14,7 +14,7 @@ made an homepage to selct E-commerce platform blikit and zepto and there two dif
 - Run the container: `docker run -p 8000:8000 yourdockerhubusername/studentproject`.
 
 ## Links
-- GitHub Repository: https://github.com/Agasya27/srceom-agasya-butolia-sl-2-Ass-2.git
+- GitHub Repository: https://github.com/krishkolhe/Assignment2.git
 - Docker Hub Repository: https://hub.docker.com/r/agasya27/studentproject/tags
 
 ##Output
