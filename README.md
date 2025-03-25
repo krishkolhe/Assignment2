@@ -19,7 +19,6 @@ made an homepage to selct between samsung and apple smartphones
 
 ##Output
 
-1{homepage}.![Screenshot 2025-03-19 234310](https://github.com/user-attachments/assets/f4a56faa-6d73-4525-b9d6-54382266cd33)
-2{blinkit-pg}.![Screenshot 2025-03-20 003059](https://github.com/user-attachments/assets/393a9d95-2f7a-43fe-8896-6326d8b2f1b6)
-3.{zepto-pg} ![Screenshot 2025-03-20 003229](https://github.com/user-attachments/assets/b8891b68-4329-4df6-a8e9-5aebdea34733)
+![Welcome to My StudentsProject! and 2 more pages - Personal - Microsoft​ Edge 3_25_2025 12_57_39 PM](https://github.com/user-attachments/assets/50e6c1e9-47b9-41ce-8462-59a3f1975652)
+
 
