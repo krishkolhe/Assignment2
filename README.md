@@ -15,7 +15,6 @@ made an homepage to selct between samsung and apple smartphones
 
 ## Links
 - GitHub Repository: https://github.com/krishkolhe/Assignment2.git
-- Docker Hub Repository: https://hub.docker.com/r/agasya27/studentproject/tags
 
 ##Output
 
